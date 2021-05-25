@@ -99,7 +99,6 @@ def do_not_fallowback():
     window6.show()
 
 def do_not_fallowback_show():
-    #insta.load_session_from_file("denemeicinbea")
     username = ui.lineEdit_username.text()
     profilez = instaloader.Profile.from_username(insta.context, username)
     takipciler = profilez.get_followers()
