@@ -1,1 +1,1 @@
-# instaloader-pyqt5
+# instaloader-Pyqt5
