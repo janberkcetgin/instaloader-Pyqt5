@@ -99,23 +99,24 @@ def do_not_fallowback():
     window6.show()
 
 def do_not_fallowback_show():
+    #insta.load_session_from_file("denemeicinbea")
     username = ui.lineEdit_username.text()
     profilez = instaloader.Profile.from_username(insta.context, username)
-    takipciler = profilez.get_followers()
-    takip_edilenler = profilez.get_followees()
+    followers = profilez.get_followers()
+    followees = profilez.get_followees()
 
-    takipciler_listesi = list()
-    takip_edilenler_listesi = list()
+    followers_list = list()
+    followees_list = list()
     new_list = list()
 
 
-    for i in takipciler:
-        takipciler_listesi.append(i.username)
-    for j in takip_edilenler:
-        takip_edilenler_listesi.append(j.username)
+    for i in followers:
+        followers_list.append(i.username)
+    for j in followees:
+        followees_list.append(j.username)
 
-    for z in takip_edilenler_listesi:
-        if z not in takipciler_listesi:
+    for z in followees_list:
+        if z not in followers_list:
             new_list.append(z)
     ui6.textEdit.setText(f"Users who don't follow you: {new_list}")
 
