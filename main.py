@@ -74,7 +74,6 @@ def all_posts():
     window4.show()
 
 
-
 def tum_postlari_indir():
     try:
         username = ui4.lineEdit.text()
